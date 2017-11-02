@@ -18,13 +18,18 @@ def crearListaMayores(listaOriginal):
     anterior=i
   return(listaMayores)
 
-#mal :v
 def intercambiarPares(listaOriginal):    
   listaNueva=[]
   contador=0
   for j in listaOriginal:
-    listaNueva.insert(contador,j)
-    contador=+1
+    posicion=listaOriginal.index(j)
+    if posicion==len(listaOriginal):
+      listaNueva.append(j)
+    elif posicion%2==1:
+      listaNueva.insert(contador-1,j)
+    else:
+      listaNueva.insert(contador,j)
+    contador+=1
   return(listaNueva)
 
     
