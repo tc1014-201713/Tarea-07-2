@@ -18,8 +18,14 @@ def crearListaMayores(listaOriginal):
     anterior=i
   return(listaMayores)
 
+#mal :v
 def intercambiarPares(listaOriginal):    
-    
+  listaNueva=[]
+  contador=0
+  for j in listaOriginal:
+    listaNueva.insert(contador,j)
+    contador=+1
+  return(listaNueva)
 
     
 def definirNumerosMayoresAlPromedio(listaOriginal):
