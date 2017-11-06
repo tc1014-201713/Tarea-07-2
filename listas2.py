@@ -1,5 +1,6 @@
 #encoding: UTF-8
 #Autor: Omar Israel Galván García
+#Matrícula: A01745810
 #Tarea 07-2
 
 def ejercicioUno(lista):      #función ejercicio 1
