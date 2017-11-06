@@ -108,7 +108,4 @@ def main():
     print(obtenerPromedioYDesviacion([95,21,73,24,15,69,71,80,49,100,85]))
     print(obtenerPromedioYDesviacion([]))
 
-
-
-
 main()
