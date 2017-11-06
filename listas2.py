@@ -3,78 +3,78 @@
 # Tarea 7-2
 
 def regresarNumerosPares(lista):
-    listaPares = []
+    listaPares = [] #Crea nueva lista
 
     for n in lista:
-        if n % 2 == 0:
-            listaPares.append(n)
+        if n % 2 == 0:#Verifica que valores son divisibles entre dos.
+            listaPares.append(n)#Agrega los valores a la nueva lista.
 
-    return listaPares
+    return listaPares #Imprime lista
 
 def regresarListaMayores(lista):
-    listaMayores = []
+    listaMayores = []#Crea nueva lista
 
-    for n in range(0, len(lista) - 1):
-        if lista[n + 1] > lista[n]:
-            listaMayores.append(lista[n + 1])
+    for n in range(0, len(lista) - 1):#Determina el tamaño de la lista y le quita uno para que esté dentro del rango.
+        if lista[n + 1] > lista[n]:#Verifica si el numero después del primero(sucesor) es mayor a su antecesor.
+            listaMayores.append(lista[n + 1])#Agrega el numeor mayor
 
-    return listaMayores
+    return listaMayores#Regresa nueva lista
 
 def regresarListaPareja(lista):
-    listaPareja = []
+    listaPareja = []#Crea nueva lista
 
-    if len(lista) % 2 == 0:
+    if len(lista) % 2 == 0:#Para lista que tienen números pares
 
-        for n in range(0, len(lista) - 1, 2):
-            listaPareja.append(lista[n + 1])
-            listaPareja.append(lista[n])
+        for n in range(0, len(lista) - 1, 2):#Determina el ritmo de cambio de do en dos
+            listaPareja.append(lista[n + 1])#Pone el segundo datos antes que el primero
+            listaPareja.append(lista[n])#Pone el primer dato
 
-    elif len(lista) == 3:
+    elif len(lista) == 3:#Para LISTAS QUE TIENEN 3 DÍGITOS SOLAMENTE. NO PROBAR CON MÁS
 
-        for n in range(0, len(lista) - 1, 2):
-            listaPareja.append(lista[n + 1])
-            listaPareja.append(lista[n])
-            listaPareja.append(lista[n - 1])
+        for n in range(0, len(lista) - 1, 2):#Determina el ritmo de cambio
+            listaPareja.append(lista[n + 1])#Pone el segundo valor en el primero
+            listaPareja.append(lista[n])#Pone el primer valor en el segundo lugar.
+            listaPareja.append(lista[n - 1])#Imprime el último valor al último
 
     else:
-        listaPareja.append(lista[-1])
+        listaPareja.append(lista[-1])#Imprime el único valor en la lista nueva.
 
     return listaPareja
 
 def regresarListaIntercambioMayor(lista):
-    listaMayor = []
+    listaMayor = []#Crea nueva lista
 
-    for n in range(0, len(lista)):
+    for n in range(0, len(lista)):#Determina el tamño de la lista para no pasarse del "range"
 
-        if max(lista) == lista[n]:
-            listaMayor.append(min(lista))
+        if max(lista) == lista[n]:#Encuentra el número mayor.
+            listaMayor.append(min(lista))#Lo pone en el lugar del mínimo
 
-        elif min(lista) == lista[n]:
-            listaMayor.append(max(lista))
+        elif min(lista) == lista[n]:#Encuentra el número menor.
+            listaMayor.append(max(lista))#Lo pone en el lugar del mayor
 
         else:
-            listaMayor.append(lista[n])
+            listaMayor.append(lista[n])#Agrega los demás valores
 
     return listaMayor
 
 def regresarListaPromedio(lista):
-    promedio = int(sum(lista) // len(lista))
+    promedio = int(sum(lista) // len(lista))#Saca el promedio de la lista
 
-    listaPromedio = []
+    listaPromedio = []#Crea nueva lista
 
-    for n in range(0, len(lista)):
+    for n in range(0, len(lista)):#Determina el tamaño de la lista
 
-        if lista[n] >= promedio:
-            listaPromedio.append(lista[n])
+        if lista[n] >= promedio:#Determina los números que son mayores al promedio
+            listaPromedio.append(lista[n])#Los apila en una lista.
 
-    cantidad = len(listaPromedio)
+    cantidad = len(listaPromedio)#Calcula el tamaño de la lista
 
-    return cantidad
+    return cantidad#Regresa la cantidad de números en la lista
 
 def calcularMedia(lista):
-    media=sum(lista)/len(lista)
+    media=sum(lista)/len(lista)#Calcula el promedio con la lista mandada desde main
 
-    return media
+    return media#Regresa el promedio
 
 def calcularDesviacion(media, lista):
     listaNumerador=[]
@@ -148,7 +148,7 @@ def main():
 
     lista1md = [1, 2, 3, 4, 5, 6]
     media1 = calcularMedia(lista1md)
-    desviacion1 = calcularDesviacion(media1, lista1md)
+    desviacion1 = calcularDesviacion(media1, lista1md)#Egrega el promedio y lo manda a la función
 
     lista2md = [95, 21, 73, 24, 15, 69, 71, 80, 49, 100, 85]
     media2 = calcularMedia(lista2md)
