@@ -14,30 +14,28 @@ def calcularNumerosPares(lista):
 
 #Recibe como parámetro una lista y regresa una nueva lista, con los valores que son mayores a un elemento previo.
 def calcularParametro(lista):
-    listaN=[]
-    for i in range(0,len(listaN)-1):
+    Parametro = []
+    for i in range (0,len(lista)-1):
         if lista[i]<lista[i+1]:
-            listaN.append(lista[i+1])
-    return listaN
+            Parametro.append(lista[i+1])
+    return Parametro
 
 
 #recibe una lista de valores y regresa una nueva lista con cada pareja de datos intercambiados.
 
 def calcularParejaDeDatos(lista):
-    intercambios=[]
-    if len(intercambios)%2==0:
-
-        for i in range(0,len(lista)-1,2):
-            intercambios.append(lista[i+1])
-            intercambios.append((lista[i]))
-
-        else:
-            for i in range(0, len(lista) - 1, 2):
-              intercambios.append(lista[i + 1])
-              intercambios.append(lista[i])
-            intercambios.append(lista[-1])
-
-    return intercambios
+    intercambiados = []
+    if len(lista) % 2 == 0:
+        for i in range(0, len(lista),2):
+            intercambiados.append(lista[i+1])
+            intercambiados.append(lista[i])
+        return intercambiados
+    else:
+        for i in range(0, len(lista)-1,2):
+            intercambiados.append(lista[i+1])
+            intercambiados.append(lista[i])
+        intercambiados.append(lista[len(lista)-1])
+        return intercambiados
 
 #recibe una lista de valores y regresa una nueva lista con el valor menor y mayor intercambiados.
 def calcularMayorYMenor(lista):
@@ -63,6 +61,26 @@ def calcularPromedio(lista):
             n+=1
     return n
 
+def calcularDesviacion(lista):
+    promedio = sum(lista) / len(lista)
+
+    n=0
+    for i in lista:
+        suma=(i-promedio)**2
+        n=suma+n
+        v=n/len(lista)
+        d=(v)**0.5
+
+    return d
+
+
+def calcularPromedio(lista):
+    promedio = sum(lista) / len(lista)
+
+    return promedio
+
+
+
 
 
 def main():#esta es la funcion principal aqui se controla con el menu
@@ -85,16 +103,17 @@ def main():#esta es la funcion principal aqui se controla con el menu
         if numero==1:
             print ("problema 1")
             lista = [1, 2, 3, 2, 4, 60, 5, 8, 3, 22, 44, 55]
+            lista2 = [5, 7, 3]
             print("la lista que tienes es:", lista, "regresa", calcularNumerosPares(lista))
-            lista = [5, 7, 3]
-            print("la lista que tienes es:", lista, "regresa", calcularNumerosPares(lista))
+            print("la lista que tienes es:", lista2, "regresa", calcularNumerosPares(lista2))
 
         elif numero==2:
             print ("problema 2")
             lista = [1, 2, 3, 2, 4, 60, 5, 8, 3, 22, 44, 55]
+            lista2 = [5, 4, 3, 2]
             print("la lista que tienes es:", lista, "regresa", calcularParametro(lista))
-            lista = [5, 4, 3, 2]
-            print("la lista que tienes es:", lista, "regresa", calcularParametro(lista))
+
+            print("la lista que tienes es:", lista2, "regresa", calcularParametro(lista2))
 
         elif numero==3:
             print ("problema 3")
@@ -120,7 +139,14 @@ def main():#esta es la funcion principal aqui se controla con el menu
             print("la lista que tienes es:", lista2, "regresa", calcularPromedio(lista2))
 
         elif numero==6:
-            pass
+            print ("problema 6.")
+            lista=[1,2,3,4,5,6]
+            lista2=[95,21,73,24,15,69,71,80,49,100,85]
+            lista3=[3]
+            print ("la lista es:",lista,"regresa ",calcularPromedio(lista),calcularDesviacion(lista))
+            print ("la lista es:", lista2, "regresa ", calcularPromedio(lista2), calcularDesviacion(lista2),)
+            print ("la lista es:", lista3, "regresa ", calcularPromedio(lista3), calcularDesviacion(lista3),)
+
 
         else:
             numero!=0 and numero!=1 and numero!=2 and numero!=3 and numero!=4 and numero!=5 and numero!=6
