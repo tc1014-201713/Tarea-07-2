@@ -166,6 +166,6 @@ def main():#esta es la funcion principal aqui se controla con el menu
 
         numero = int(input("que numero deseas elegir en el menu para poder obtener las listas: "))
 
-    print ("Nos vemos, regresa pronto")
+    print ("Nos vemos, regresa pronto ten un buen dia")
 
 main()
