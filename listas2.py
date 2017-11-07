@@ -3,6 +3,11 @@
 # Tarea 2 sobre listas
 
 def calcularPares(lista):
+    '''
+    Regresa una lista con los valores pares de la lista original.
+    :param lista:
+    :return: nueva
+    '''
     nueva = []
     for dato in lista:
         if dato % 2 == 0:
@@ -10,6 +15,11 @@ def calcularPares(lista):
     return nueva
 
 def calcularMayoresAPrevio(lista):
+    '''
+    Regresa una lista con los valores que son mayores a un elemento previo.
+    :param lista:
+    :return: nueva
+    '''
     nueva = []
     if len(lista) > 0:
         previo = lista[0]
@@ -20,6 +30,11 @@ def calcularMayoresAPrevio(lista):
     return nueva
 
 def intercambiarParejas(lista):
+    '''
+    Regresa una lista con cada pareja de datos intercambiados de la lista original.
+    :param lista:
+    :return: nueva
+    '''
     nueva = []
     for i in range(len(lista)):
         if i % 2 == 0:
@@ -29,6 +44,11 @@ def intercambiarParejas(lista):
     return nueva
 
 def intercambiarMenorYMayor(lista):
+    '''
+    Regresa una lista con el valor menor y mayor intercambiados de la lista original.
+    :param lista:
+    :return:
+    '''
     nueva = lista[::]
     if len(lista) > 0:
         menor_l = min(lista)
@@ -44,6 +64,11 @@ def intercambiarMenorYMayor(lista):
     return nueva
 
 def calcularMayoresOIgualesAPromedio(lista):
+    '''
+    Regresa una lista con los números mayores o iguales al promedio de la lista original.
+    :param lista:
+    :return: nueva
+    '''
     nueva = []
     if len(lista) > 0:
         promedio = sum(lista)/len(lista)
@@ -53,6 +78,11 @@ def calcularMayoresOIgualesAPromedio(lista):
     return nueva
 
 def calcularMediaYDesviacion(lista):
+    '''
+    Regresa una dupla con la media y la desviación estándar de la lista original.
+    :param lista:
+    :return: media, desviación estándar
+    '''
     n = len(lista)
     if n == 0:
         media = 0
@@ -77,22 +107,22 @@ def main():
     print("Con la lista [5,4,3,2], regresa",calcularMayoresAPrevio([5,4,3,2]))
     print("Con la lista [], regresa",calcularMayoresAPrevio([]))
     print("----------------------------------------")
-    print("Problema 3. Regresa una lista con cada pareja de datos intercambiados.")
+    print("Problema 3. Regresa una lista con cada pareja de datos intercambiados de la lista original.")
     print("Con la lista [1,2,3,2,4,60,5,8,3,22,44,55], regresa",intercambiarParejas([1,2,3,2,4,60,5,8,3,22,44,55]))
     print("Con la lista [1,2,3], regresa",intercambiarParejas([1,2,3]))
     print("Con la lista [], regresa",intercambiarParejas([]))
     print("----------------------------------------")
-    print("Problema 4. Regresa una lista con el valor menor y mayor intercambiados.")
+    print("Problema 4. Regresa una lista con el valor menor y mayor intercambiados de la lista original.")
     print("Con la lista [5,9,3,22,19,31,10,7], regresa",intercambiarMenorYMayor([5,9,3,22,19,31,10,7]))
     print("Con la lista [1,2,3], regresa",intercambiarMenorYMayor([1,2,3]))
     print("Con la lista [], regresa",intercambiarMenorYMayor([]))
     print("----------------------------------------")
-    print("Problema 5. Regresa una lista con los números mayores o iguales al promedio.")
+    print("Problema 5. Regresa una lista con los números mayores o iguales al promedio de la lista original.")
     print("Con la lista [70, 80, 90] regresa",calcularMayoresOIgualesAPromedio([70, 80, 90]))
     print("Con la lista [95,21,73,24,15,69,71,80,49,100,85] regresa",calcularMayoresOIgualesAPromedio([95,21,73,24,15,69,71,80,49,100,85]))
     print("Con la lista [] regresa",calcularMayoresOIgualesAPromedio([]))
     print("----------------------------------------")
-    print("Problema 6. Regresa una dupla con la media y la desviación estándar.")
+    print("Problema 6. Regresa una dupla con la media y la desviación estándar de la lista original.")
     print("Con la lista [1,2,3,4,5,6] regresa",calcularMediaYDesviacion([1,2,3,4,5,6]))
     print("Con la lista [95,21,73,24,15,69,71,80,49,100,85] regresa",calcularMediaYDesviacion([95,21,73,24,15,69,71,80,49,100,85]))
     print("Con la lista [] regresa",calcularMediaYDesviacion([]))
