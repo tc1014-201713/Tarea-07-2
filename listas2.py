@@ -77,8 +77,11 @@ def valoresMayores(lista): #Problema 2.
 
 def invertirMayorMenor(lista):
     lista_nueva = lista[:]
-    lista_nueva[lista.index(max(lista))] = min(lista)
-    lista_nueva[lista.index(min(lista))] = max(lista)
+    if len(lista) == 0 or len(lista) == 1:
+        return lista_nueva
+    else:
+        lista_nueva[lista.index(max(lista))] = min(lista)
+        lista_nueva[lista.index(min(lista))] = max(lista)
 
     return lista_nueva
 
@@ -117,8 +120,13 @@ def main (): #Programa principal.
     print("Estos son los resultados al problema 4.")
     lista4_1 = [5,9,3,22,19,31,10,7]
     lista4_2 = [1,2,3]
+    lista4_3 = []
+    lista4_4 = [1]
+    
     print("Con la lista", lista4_1, "regresa", invertirMayorMenor(lista4_1))
     print("Con la lista", lista4_2, "regresa", invertirMayorMenor(lista4_2))
+    print("Con la lista", lista4_3, "regresa", invertirMayorMenor(lista4_3))
+    print("Con la lista", lista4_4, "regresa", invertirMayorMenor(lista4_4))
     print("\r")
 
 
