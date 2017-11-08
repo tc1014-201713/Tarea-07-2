@@ -77,11 +77,8 @@ def valoresMayores(lista): #Problema 2.
 
 def invertirMayorMenor(lista):
     lista_nueva = lista[:]
-    lista_nueva.remove(max(lista_nueva))
-    lista_nueva.remove(min(lista_nueva))
-
-    lista_nueva.insert(min(lista), max(lista))
-    lista_nueva.insert(max(lista), min(lista))
+    lista_nueva[lista.index(max(lista))] = min(lista)
+    lista_nueva[lista.index(min(lista))] = max(lista)
 
     return lista_nueva
 
