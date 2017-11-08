@@ -74,7 +74,7 @@ def calcularDesviacion(lista):
     return d
 
 
-def calcularPromedio(lista):
+def calcularPromedio1(lista):
     promedio = sum(lista) / len(lista)
 
     return promedio
@@ -144,8 +144,8 @@ def main():#esta es la funcion principal aqui se controla con el menu
             lista2=[95,21,73,24,15,69,71,80,49,100,85]
             lista3=[3]
             print ("la lista es:",lista,"regresa ",calcularPromedio(lista),calcularDesviacion(lista))
-            print ("la lista es:", lista2, "regresa ", calcularPromedio(lista2), calcularDesviacion(lista2),)
-            print ("la lista es:", lista3, "regresa ", calcularPromedio(lista3), calcularDesviacion(lista3),)
+            print ("la lista es:", lista2, "regresa ", calcularPromedio1(lista2), calcularDesviacion(lista2),)
+            print ("la lista es:", lista3, "regresa ", calcularPromedio1(lista3), calcularDesviacion(lista3),)
 
 
         else:
