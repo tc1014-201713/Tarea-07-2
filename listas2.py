@@ -70,7 +70,7 @@ def parejaIntercamiados(lista): #Ejercicio 3: se intercambian los valores de cad
     return intercambio
 
 
-def menoryMayorYMenorIntercambiados(lista): #Ejercicio 4: se intercambia el valor menor con el mayor de una lista
+def mayorYMenorIntercambiados(lista): #Ejercicio 4: se intercambia el valor menor con el mayor de una lista
 
     intercambio = []
 
@@ -133,8 +133,8 @@ def main():
     print("Con la lista %s ,regresa %s" % (lista5,parejaIntercamiados(lista5)))
 
     print("\nProblema 4. Regresa una lista con el valor menor y mayor intercambiados.")
-    print("Con la lista %s ,regresa %s" % (lista6,menoryMayorYMenorIntercambiados(lista6)))
-    print("Con la lista %s ,regresa %s" % (lista4,menoryMayorYMenorIntercambiados(lista4)))
+    print("Con la lista %s ,regresa %s" % (lista6,mayorYMenorIntercambiados(lista6)))
+    print("Con la lista %s ,regresa %s" % (lista4,mayorYMenorIntercambiados(lista4)))
 
     print("\nProblema 5. Regresa una lista con el número de datos que son mayores o iguales al promedio de todos los valores de la lista.")
     print("Con la lista %s ,regresa %s" % (lista7,mayoresPromedio(lista7)))
