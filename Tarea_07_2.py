@@ -56,6 +56,20 @@ def compararconpromedio(listaoriginal):
             contador += 1
     return contador
 
+#Funcion que calcula el promedio de los valoeres de una lista
+def sacarpromedio(listaoriginal):
+    promedio = sum(listaoriginal) / len(listaoriginal)
+    return promedio
+
+#Función que compara con el promedio y cea una nueva lista con los valores superiores o iguales a el
+def compararconpromedio2(listaoriginal):
+    promedio = sum(listaoriginal) / len(listaoriginal)
+    listacomparada = []
+    for x in listaoriginal:
+        if x >= promedio:
+            listacomparada.append(x)
+    return listacomparada
+
 #Funcion que calcula el promedio y la deviacion de los valores dentro de una lista y los regresa en una dupla
 def calcularpromedioydesviacion(listaoriginal):
     if len(listaoriginal) != 0 and len(listaoriginal) != 1:
@@ -98,9 +112,9 @@ def main():
 
     print("\nProblema 5.")
     listaoriginal = [80,100,90]
-    print("Con la lista: ", listaoriginal, ",regresa: ", compararconpromedio(listaoriginal))
+    print("Con la lista: ", listaoriginal, ",regresa: ", compararconpromedio(listaoriginal),". Ya que el promedio es", sacarpromedio(listaoriginal)," y los numeros ", compararconpromedio2(listaoriginal), "son mayores o iguales." )
     listaoriginal = [70,65,89,34,23,75,68,98,100,56,78,93,45]
-    print("Con la lista: ", listaoriginal, ",regresa: ", compararconpromedio(listaoriginal))
+    print("Con la lista: ", listaoriginal, ",regresa: ", compararconpromedio(listaoriginal),". Ya que el promedio es", sacarpromedio(listaoriginal)," y los numeros ", compararconpromedio2(listaoriginal), "son mayores o iguales.")
 
     print("\nProblema 6.")
     listaoriginal = [1, 2, 3, 4, 5, 6]
